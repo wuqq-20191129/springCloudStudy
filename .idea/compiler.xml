@@ -20,6 +20,7 @@
         <module name="spring-nacos-consumer" />
         <module name="spring-cloud-stream-rocket" />
         <module name="dubbo-consumer" />
+        <module name="spring-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
