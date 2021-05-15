@@ -1,0 +1,10 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /wuqq
+spring:
+  application:
+    name: spring-mongodb
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/wuqq-test

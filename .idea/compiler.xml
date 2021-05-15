@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-elasticsearch" />
+        <module name="spring-cloud-stream-rocket-consumer" />
+        <module name="spring-nacos-config" />
+        <module name="spring-mongodb" />
+        <module name="spring-nacos-config-server" />
+        <module name="spring-nacos-gateway" />
+        <module name="dubbo-interface" />
+        <module name="rocketmq-test" />
+        <module name="dubbo-provider" />
+        <module name="spring-protobuf" />
+        <module name="spring-nacos-provider" />
+        <module name="spring-nacos-consumer" />
+        <module name="spring-cloud-stream-rocket" />
+        <module name="dubbo-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="spring-cloud-servicecall" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
+  </component>
+</project>

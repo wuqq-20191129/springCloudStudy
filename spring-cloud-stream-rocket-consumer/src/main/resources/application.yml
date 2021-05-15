@@ -1,0 +1,23 @@
+
+spring:
+  application:
+    name: rocket-stream-consumer
+#    springcloud stream 配置 对应BindingServiceProperties
+  cloud:
+    stream:
+      bindings:
+        original:
+          destination: wuqq-topic
+          content-type: application/json # 内容格式。这里使用 JSON
+          group: consumer-one
+#          Rocketmq 配置 BindingServiceProperties
+      rocketmq:
+        binder:
+          name-server: localhost:9876
+        bindings:
+          original:
+            consumer:
+              enabled: true
+              broadcasting: false
+server:
+  port: 8081

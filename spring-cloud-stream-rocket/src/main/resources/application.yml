@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: stream-rocket
+  cloud:
+#    spring cloud stream 配置项
+    stream:
+      bindings:
+        oringinal:
+          destination: wuqq-topic
+          content-type: application/json
+#rocketmq 配置项 对应RocketMQBinderConfigurationProperties类
+    rocketmq:
+      bindings:
+        oringinal:
+          producer:
+            group: test
+            sync: true
