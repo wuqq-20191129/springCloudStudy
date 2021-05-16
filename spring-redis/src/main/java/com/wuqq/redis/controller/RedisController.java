@@ -1,5 +1,6 @@
 package com.wuqq.redis.controller;
 
+import com.wuqq.redis.entry.User;
 import com.wuqq.redis.util.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,34 @@ public class RedisController {
         try {
             String value = (String)RedisUtil.get(this.redisTemplate,key);
             return value;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping("/setObj")
+    public boolean setObject(int id,String name,int age){
+        User user =new User();
+        user.setId(id);
+        user.setAge(age);
+        user.setName(name);
+        logger.info("访问set:"+user.toString());
+        try {
+            RedisUtil.set(this.redisTemplate,"user"+user.getId(),user);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @RequestMapping("/getObj")
+    public String getObj(int id){
+        logger.info("访问get:key={}",id);
+        try {
+            User user = (User) RedisUtil.get(this.redisTemplate,"user"+String.valueOf(id));
+            return user.toString();
         } catch (Exception e) {
             e.printStackTrace();
         }
