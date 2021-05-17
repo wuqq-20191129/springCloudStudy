@@ -21,6 +21,7 @@
         <module name="spring-cloud-stream-rocket" />
         <module name="dubbo-consumer" />
         <module name="spring-redis" />
+        <module name="spring-mybatis-plus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
