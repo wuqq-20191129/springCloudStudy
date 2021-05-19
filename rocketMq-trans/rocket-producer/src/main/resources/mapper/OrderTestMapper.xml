@@ -2,4 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wuqq.rocket.mapper.OrderTestMapper">
 
+    
+    <insert id="insert" parameterType="com.wuqq.rocket.entity.OrderTest">
+        insert into order_test(order_id,username,content)
+        values(#{orderTest.orderId},#{orderTest.username},#{orderTest.content})
+    </insert>
 </mapper>

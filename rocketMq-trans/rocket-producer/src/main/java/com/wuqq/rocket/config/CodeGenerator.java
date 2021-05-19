@@ -1,25 +1,33 @@
 package com.wuqq.rocket.config;
 
+
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
+//import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
-import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.FileOutConfig;
+import com.baomidou.mybatisplus.generator.config.GlobalConfig;
+import com.baomidou.mybatisplus.generator.config.PackageConfig;
+import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 /**
- * @Classname AutoGenerator
- * @Description TODO
- * @Date 2021/5/19 14:59
- * @Created by mh
+ * @author: wuqq
+ * @date: 2021/5/17 8:28 PM
+ * @version: 1.0
  */
+
+// 演示例子，执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
 public class CodeGenerator {
 
     /**
@@ -52,20 +60,23 @@ public class CodeGenerator {
         gc.setAuthor(scanner("开发者"));
         gc.setOpen(false);
         // gc.setSwagger2(true); 实体属性 Swagger2 注解
+        gc.setFileOverride(true);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:oracle:thin:@172.20.19.29:1521:wacc");
-        dsc.setDriverName("oracle.jdbc.driver.OracleDriver");
-        dsc.setUsername("w_acc_st");
-        dsc.setPassword("w_acc_st");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/mogu_blog?characterEncoding=utf8&connectTimeout=100&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC");
+        // dsc.setSchemaName("public");
+        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setUsername("root");
+        dsc.setPassword("142845wer");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.wuqq").setController("controller").setEntity("entity").setMapper("mapper").setService("service").setServiceImpl("Impl");
+        pc.setParent("com.wuqq").setController("controller").setEntity("entity").setMapper("mapper").setService("service")
+        .setServiceImpl("service.serviceImpl");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -126,21 +137,21 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        //strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
+//        strategy.setSuperEntityClass("你自己的父类实体,没有就不用设置!");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         // 公共父类
-        //strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
+//        strategy.setSuperControllerClass("你自己的父类控制器,没有就不用设置!");
         // 写于父类中的公共字段
-        //strategy.setSuperEntityColumns("id");
+//        strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("表名"));
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
-
         System.out.println("success");
+
 
     }
 

@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
 
@@ -16,6 +17,7 @@ import javax.annotation.Resource;
  * @Date 2021/4/30 16:09
  * @Created by mh
  */
+@Configuration
 public class ConsumerCfg {
 
     private static final Logger LOG = LoggerFactory.getLogger(ConsumerCfg.class) ;
@@ -27,7 +29,9 @@ public class ConsumerCfg {
     private int consumeThreadMin;
     @Value("${rocketmq.consumer.consumeThreadMax}")
     private int consumeThreadMax;
-    @Value("${rocketmq.consumer.topics}")
+//    @Value("${rocketmq.consumer.topics}")
+//    private String topics;
+    @Value("${rocket.topic}")
     private String topics;
     @Value("${rocketmq.consumer.consumeMessageBatchMaxSize}")
     private int consumeMessageBatchMaxSize;
@@ -43,11 +47,12 @@ public class ConsumerCfg {
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
         consumer.setConsumeMessageBatchMaxSize(consumeMessageBatchMaxSize);
         try {
-            String[] topicTagsArr = topics.split(";");
-            for (String topicTags : topicTagsArr) {
-                String[] topicTag = topicTags.split("~");
-                consumer.subscribe(topicTag[0],topicTag[1]);
-            }
+//            String[] topicTagsArr = topics.split(";");
+//            for (String topicTags : topicTagsArr) {
+//                String[] topicTag = topicTags.split("~");
+//                consumer.subscribe(topicTag[0],topicTag[1]);
+//            }
+            consumer.subscribe(topics,"*");
             consumer.start();
         }catch (MQClientException e){
             e.printStackTrace();

@@ -33,7 +33,7 @@ public class TransactionListenerImpl implements TransactionListener {
         try{
             String body = new String(msg.getBody());
             OrderTest order = JSONObject.parseObject(body, OrderTest.class);
-            orderTestService.save(order,msg.getTransactionId());
+            orderTestService.saveFortest(order,msg.getTransactionId());
             state = LocalTransactionState.COMMIT_MESSAGE;
             logger.info("本地事务已提交。{}",msg.getTransactionId());
         }catch (Exception e){

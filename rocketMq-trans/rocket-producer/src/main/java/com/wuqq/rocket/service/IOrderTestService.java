@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IOrderTestService extends IService<OrderTest> {
 
+    boolean saveFortest(OrderTest orderTest,String id);
+
 }

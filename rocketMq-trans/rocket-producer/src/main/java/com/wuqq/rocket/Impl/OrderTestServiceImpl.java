@@ -57,13 +57,18 @@ public class OrderTestServiceImpl extends ServiceImpl<OrderTestMapper, OrderTest
         return result;
     }
 
-    public boolean save(OrderTest entity,String transactionId) {
+    @Override
+    public boolean saveFortest(OrderTest entity,String transactionId) {
         boolean result =false;
-        result=this.saveOrUpdate(entity);
+        int n= this.baseMapper.insert(entity,transactionId);
+        if(n>0){
+          result = true;
+        }
         localTrans.put(transactionId,result);
         logger.info("订单创建完成......");
         return result;
     }
+
 
 
 }

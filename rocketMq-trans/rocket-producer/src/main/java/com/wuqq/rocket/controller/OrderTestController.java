@@ -33,10 +33,15 @@ public class OrderTestController {
 
     @GetMapping("/createOrder")
     public void createOrder(int id , String userName, String content){
-        logger.info("接收订单数据={}",id,userName,content);
+//        logger.info("接收订单数据={}",id,userName,content);
+        logger.info("id={}",id);
+        logger.info("userName={}",userName);
+
+        logger.info("content={}",content);
+
         OrderTest orderTest = new OrderTest();
-        orderTest.setOrderId(BigDecimal.valueOf(id));
-        orderTest.setUserName(userName);
+        orderTest.setOrderId(id);
+        orderTest.setUsername(userName);
         orderTest.setContent(content);
         orderTestService.save(orderTest);
     }

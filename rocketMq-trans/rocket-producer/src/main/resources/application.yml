@@ -6,10 +6,11 @@ spring:
   application:
     name: mapper-producer
   datasource:
-    url: jdbc:oracle:thin:@172.20.19.29:1521:wacc
-    username: w_acc_st
-    password: w_acc_st
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:oracle:thin:@172.20.19.29:1521:wacc
+    url: jdbc:mysql://127.0.0.1:3306/mogu_blog?characterEncoding=utf8&connectTimeout=100&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 142845wer
+    driver-class-name: com.mysql.cj.jdbc.Driver
 rocketmq:
   group: transaction-test
   namesrv: 127.0.0.1:9876
