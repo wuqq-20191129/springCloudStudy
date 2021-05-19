@@ -1,0 +1,27 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /wuqq
+spring:
+  application:
+    name: mapper-producer
+  datasource:
+    url: jdbc:oracle:thin:@172.20.19.29:1521:wacc
+    username: w_acc_st
+    password: w_acc_st
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+rocketmq:
+  group: transaction-test
+  namesrv: 127.0.0.1:9876
+#  消息最大长度 默认1024*4（4M）
+  maxMessageSize: 4096
+#  默认 3000 单位mills
+  sendTimeout: 10000
+#  重试次数 默认2
+  retryTimes: 3
+
+#  基本配置
+  topic: transaction-topic
+  tags: transaction-topic
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
