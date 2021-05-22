@@ -1,9 +1,10 @@
-package com.wuqq.rocket;
+package com.wuqq.consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
  * @Classname RocketConsumerApplication
@@ -11,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2021/5/19 10:48
  * @Created by mh
  */
-@SpringBootApplication
+@SpringBootApplication(exclude ={DataSourceAutoConfiguration.class})
 public class RocketConsumerApplication {
 
 

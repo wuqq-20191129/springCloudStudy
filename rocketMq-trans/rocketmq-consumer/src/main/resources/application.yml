@@ -1,0 +1,19 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /wuqq
+spring:
+  application:
+    name: rocket-consumer
+rocketmq:
+  group: transaction-test
+  namesrv: 127.0.0.1:9876
+
+  consumeMaxThread: 60
+  consumeMinThread: 24
+
+  #默认为1
+  consumeMessageBatchsize: 1
+
+  topic: transaction-topic
+  tags: transaction-topic
