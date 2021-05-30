@@ -24,6 +24,9 @@
         <module>spring-redis</module>
         <module>spring-mybatis-plus</module>
         <module>rocketMq-trans</module>
+        <module>spring-algorithm</module>
+        <module>spring-cloud-security-oauth2</module>
+        <module>spring-security-resource-server</module>
     </modules>
 
     <properties>
