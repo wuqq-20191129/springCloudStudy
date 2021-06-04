@@ -21,6 +21,14 @@ public class HttpTestController {
 
     private static Logger logger = LoggerFactory.getLogger(HttpTestController.class);
 
+
+    @GetMapping("/test")
+    public void getTestNoParam(  ){
+
+        //logger.info("接收到的实体={}",user.toString());
+        logger.info("GetMapping Test");
+    }
+
     //http://localhost:8080/httpget?username=wuqq&password=123456&age=20
     //实体类接收
     @GetMapping("/httpget")

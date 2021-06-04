@@ -1,4 +1,30 @@
 server:
+  port: 8089
+  servlet:
+    context-path: /wuqq
+
+spring:
+  application:
+    name: rocket-consumer
+  datasource:
+    url:  jdbc:oracle:thin:@172.20.19.29:1521:wacc
+    username: w_acc_st
+    password: w_acc_st
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+rocketmq:
+  group: transaction-test
+  namesrv: 127.0.0.1:9876
+  consumeMaxThread: 60
+  consumeMinThread: 24
+#  设置一次消费的消息条数 默认为1
+  consumeMessageBatchSize: 1
+
+    #  基本配置
+  topic: transaction-topic
+  tags: transaction-topic
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/rocket/*.xml
+server:
   port: 9090
   servlet:
     context-path: /wuqq

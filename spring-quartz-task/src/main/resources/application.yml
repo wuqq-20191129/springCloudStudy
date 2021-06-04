@@ -1,0 +1,10 @@
+server:
+  port: 8067
+  servlet:
+    context-path: /wuqq
+spring:
+  application:
+    name: spring-quartz-task
+  devtools:
+    restart:
+      enabled: true
