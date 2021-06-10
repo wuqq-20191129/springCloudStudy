@@ -1,7 +1,6 @@
 package com.wuqq.controller;
 
 import com.wuqq.entity.User;
-import org.bouncycastle.asn1.cms.PasswordRecipientInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -23,10 +22,11 @@ public class HttpTestController {
 
 
     @GetMapping("/test")
-    public void getTestNoParam(  ){
+    public String getTestNoParam(){
 
         //logger.info("接收到的实体={}",user.toString());
         logger.info("GetMapping Test");
+        return "hello test";
     }
 
     //http://localhost:8080/httpget?username=wuqq&password=123456&age=20
@@ -51,10 +51,11 @@ public class HttpTestController {
     //http://localhost:8080/httpget?username=wuqq&password=123456&age=20
     //路径中后传值  直接获取  参数名称须一致
     @GetMapping("getafterurl")
-    public void getTest2(String username , String password ,int age){
+    public String getTest2(String username , String password ,int age){
         logger.info("username="+username);
         logger.info("password="+password);
         logger.info("age="+age);
+        return "收到请求";
     }
 
 
@@ -69,7 +70,7 @@ public class HttpTestController {
 
 
         //http://localhost:8080/get/wuqq/123456/20
-    //路径后中传值  参数作为路径的一部分 使用@PathVariable 也可取别名
+    //路径中传值  参数作为路径的一部分 使用@PathVariable 也可取别名
     @GetMapping("get/{username}/{password}/{age}")
     public void getTest4(@PathVariable("username") String name , @PathVariable("password") String psd , @PathVariable("age") int temp){
         logger.info("username="+name);

@@ -13,6 +13,7 @@
     <properties>
         <docker.image.prefix>docker</docker.image.prefix>
     </properties>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -33,13 +34,18 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.75</version>
+            <version>1.2.62</version>
         </dependency>
     </dependencies>
 
@@ -95,7 +101,7 @@
                         <imageTag>latest</imageTag>
                     </imageTags>
                     <!--指定远程 docker 服务器ip地址-->
-                    <dockerHost>http://172.20.16.53:2375</dockerHost>
+<!--                    <dockerHost>http://172.20.16.53:2375</dockerHost>-->
                     <!-- 这里是复制jar包到docker容器指定目录配置 -->
                     <resources>
                         <resource>

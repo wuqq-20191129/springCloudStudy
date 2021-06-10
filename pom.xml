@@ -27,6 +27,8 @@
         <module>spring-algorithm</module>
         <module>spring-cloud-security-oauth2</module>
         <module>spring-security-resource-server</module>
+        <module>spring-task</module>
+        <module>spring-cloud-aop</module>
     </modules>
 
     <properties>
