@@ -1,4 +1,5 @@
-FROM java:alpine
-ADD ["spring-cloud-http-1.0-SNAPSHOT.jar","demo.jar"]
-EXPOSE :8080
-ENTRYPOINT ["java","-jar","/demo.jar"]
+#FROM openjdk:8-jre
+FROM openjdk:8
+VOLUME /temp
+ADD spring-cloud-http-1.0-SNAPSHOT.jar spring-cloud-http.jar
+ENTRYPOINT ["java" ,"-jar", "/spring-cloud-http.jar"]

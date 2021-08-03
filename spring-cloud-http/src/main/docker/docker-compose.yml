@@ -1,0 +1,10 @@
+version: '3'
+services:
+  http:
+#    image: http:1.0.0
+    build:
+      context: ../docker/
+      dockerfile: Dockerfile
+    container_name: http
+    ports:
+    - '8080:8066'

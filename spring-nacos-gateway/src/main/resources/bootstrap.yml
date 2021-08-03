@@ -1,0 +1,18 @@
+server:
+  port: 8099
+  servlet:
+    context-path: /nacos-gateway
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: dev
+        namespace: dev
+      config:
+        server-addr: localhost:8848
+        group: dev
+        namespace: dev
+        file-extension: yaml

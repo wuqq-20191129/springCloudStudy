@@ -1,6 +1,10 @@
 package com.wuqq.sort;
 
+import com.wuqq.Color;
+
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author: wuqq
@@ -37,7 +41,16 @@ public class ShellSort {
     }
 
     public static void main(String[] args) {
-        int a[]={4,1,3,2,6,5,8,9,7};
-        System.out.println(Arrays.toString(shell(a)));
+//        int a[]={4,1,3,2,6,5,8,9,7};
+//        System.out.println(Arrays.toString(shell(a)));
+                Color[] a = Color.values();
+        for(Color color:a){
+            System.out.println(11);
+        }
+        System.out.println(1);
+        List<Color> list=Arrays.stream(Color.values()).collect(Collectors.toList());
+        for(Color color:list){
+            System.out.println(color.getValue());
+        }
     }
 }

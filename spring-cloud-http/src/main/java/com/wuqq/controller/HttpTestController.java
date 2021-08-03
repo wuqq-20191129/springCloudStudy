@@ -1,12 +1,22 @@
 package com.wuqq.controller;
 
+import com.wuqq.entity.TestEntity;
 import com.wuqq.entity.User;
+import com.wuqq.request.Shits;
+import com.wuqq.response.DataFromHttp;
+import com.wuqq.response.InvoiceInfo;
+import com.wuqq.response.RealResponse;
+import com.wuqq.response.TestResponse;
+import org.assertj.core.util.Lists;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Classname HttpTestController
@@ -82,10 +92,35 @@ public class HttpTestController {
     //post测试 postman 测试
     //无参数
     @PostMapping("/httppost")
-    public void postTest(){
+    @ResponseBody
+    public RealResponse postTest(@RequestBody Shits shit){
 
         //logger.info("接收到的实体={}",user.toString());
+        RealResponse testResponse = new RealResponse();
+        testResponse.setCode("0000");
+        testResponse.setMessage("操作成功");
+        testResponse.setCode("0000");
+        testResponse.setMessage("操作成功");
+        List<InvoiceInfo> invoiceInfos = new ArrayList<>();
+        List<String> nums = Lists.newArrayList("23323");
+        InvoiceInfo info =new InvoiceInfo();
+        info.setSheetId("sssssssss");
+        info.setInvoiceType("2");
+        info.setInvoiceNumber(nums);
+        invoiceInfos.add(info);
+        List<DataFromHttp> dataFromHttpList = new ArrayList<>();
+        DataFromHttp dataFromHttp =new DataFromHttp();
+        dataFromHttp.setTaskId("1111");
+        dataFromHttp.setClientId("2222");
+        dataFromHttp.setSuccess(invoiceInfos);
+        dataFromHttp.setError(invoiceInfos);
+        dataFromHttpList.add(dataFromHttp);
+        testResponse.setData(dataFromHttpList);
+
         logger.info("postmapping Test");
+
+
+        return testResponse;
     }
 
     //实体类接收

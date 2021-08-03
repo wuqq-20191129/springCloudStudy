@@ -2,30 +2,69 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-elasticsearch" />
-        <module name="spring-cloud-stream-rocket-consumer" />
-        <module name="spring-nacos-config" />
+        <module name="spring-quartz-task" />
         <module name="spring-mongodb" />
         <module name="spring-nacos-config-server" />
-        <module name="spring-nacos-gateway" />
-        <module name="dubbo-interface" />
         <module name="rocketmq-test" />
-        <module name="dubbo-provider" />
-        <module name="spring-protobuf" />
+        <module name="spring-task" />
+        <module name="spring-algorithm" />
+        <module name="spring-cloud-http" />
         <module name="spring-nacos-provider" />
         <module name="spring-nacos-consumer" />
         <module name="spring-cloud-stream-rocket" />
+        <module name="spring-mybatis-plus" />
+        <module name="spring-cloud-stream-rocket-consumer" />
+        <module name="spring-nacos-config" />
+        <module name="rocket-producer" />
+        <module name="spring-nacos-gateway" />
+        <module name="dubbo-interface" />
+        <module name="dubbo-provider" />
+        <module name="rocketmq-consumer" />
+        <module name="spring-protobuf" />
+        <module name="spring-cloud-aop" />
         <module name="dubbo-consumer" />
         <module name="spring-redis" />
-        <module name="spring-mybatis-plus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="dubbo-consumer" target="8" />
+      <module name="dubbo-interface" target="8" />
+      <module name="dubbo-provider" target="8" />
+      <module name="dubbo-test" target="8" />
+      <module name="rocket-producer" target="8" />
+      <module name="rocketmq-consumer" target="8" />
+      <module name="rocketmq-test" target="8" />
+      <module name="rocketMq-trans" target="8" />
+      <module name="spring-activity-wechatcom" target="8" />
+      <module name="spring-algorithm" target="8" />
+      <module name="spring-cloud-aop" target="8" />
+      <module name="spring-cloud-http" target="8" />
+      <module name="spring-cloud-security" target="8" />
+      <module name="spring-cloud-security (1)" target="8" />
+      <module name="spring-cloud-security-oauth2" target="8" />
       <module name="spring-cloud-servicecall" target="8" />
+      <module name="spring-cloud-stream-rocket" target="8" />
+      <module name="spring-cloud-stream-rocket-consumer" target="8" />
+      <module name="spring-elasticsearch" target="8" />
+      <module name="spring-mongodb" target="8" />
+      <module name="spring-mybatis-plus" target="8" />
+      <module name="spring-nacos-config" target="8" />
+      <module name="spring-nacos-config-server" target="8" />
+      <module name="spring-nacos-consumer" target="8" />
+      <module name="spring-nacos-gateway" target="8" />
+      <module name="spring-nacos-provider" target="8" />
+      <module name="spring-protobuf" target="8" />
+      <module name="spring-quartz-task" target="8" />
+      <module name="spring-redis" target="8" />
+      <module name="spring-security-resource-server" target="8" />
+      <module name="spring-task" target="8" />
+      <module name="springCloudStudy" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

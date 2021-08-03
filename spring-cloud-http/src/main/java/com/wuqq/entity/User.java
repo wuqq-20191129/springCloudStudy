@@ -1,5 +1,6 @@
 package com.wuqq.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @Created by mh
  */
 @Data
+@AllArgsConstructor
 public class User implements Serializable {
 
 

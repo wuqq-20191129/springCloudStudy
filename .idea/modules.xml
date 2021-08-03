@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbo-test/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo-test/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-test/dubbo-interface/dubbo-interface.iml" filepath="$PROJECT_DIR$/dubbo-test/dubbo-interface/dubbo-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-test/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/dubbo-test/dubbo-provider/dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-test/dubbo-test.iml" filepath="$PROJECT_DIR$/dubbo-test/dubbo-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketMq-trans/rocket-producer/rocket-producer.iml" filepath="$PROJECT_DIR$/rocketMq-trans/rocket-producer/rocket-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketMq-trans/rocketMq-trans.iml" filepath="$PROJECT_DIR$/rocketMq-trans/rocketMq-trans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketMq-trans/rocketmq-consumer/rocketmq-consumer.iml" filepath="$PROJECT_DIR$/rocketMq-trans/rocketmq-consumer/rocketmq-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rocketmq-test/rocketmq-test.iml" filepath="$PROJECT_DIR$/rocketmq-test/rocketmq-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-algorithm/spring-algorithm.iml" filepath="$PROJECT_DIR$/spring-algorithm/spring-algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-aop/spring-cloud-aop.iml" filepath="$PROJECT_DIR$/spring-cloud-aop/spring-cloud-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-http/spring-cloud-http.iml" filepath="$PROJECT_DIR$/spring-cloud-http/spring-cloud-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-stream-rocket/spring-cloud-stream-rocket.iml" filepath="$PROJECT_DIR$/spring-cloud-stream-rocket/spring-cloud-stream-rocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-stream-rocket-consumer/spring-cloud-stream-rocket-consumer.iml" filepath="$PROJECT_DIR$/spring-cloud-stream-rocket-consumer/spring-cloud-stream-rocket-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-elasticsearch/spring-elasticsearch.iml" filepath="$PROJECT_DIR$/spring-elasticsearch/spring-elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mongodb/spring-mongodb.iml" filepath="$PROJECT_DIR$/spring-mongodb/spring-mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mybatis-plus/spring-mybatis-plus.iml" filepath="$PROJECT_DIR$/spring-mybatis-plus/spring-mybatis-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-nacos-config/spring-nacos-config.iml" filepath="$PROJECT_DIR$/spring-nacos-config/spring-nacos-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-nacos-config-server/spring-nacos-config-server.iml" filepath="$PROJECT_DIR$/spring-nacos-config-server/spring-nacos-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-nacos-consumer/spring-nacos-consumer.iml" filepath="$PROJECT_DIR$/spring-nacos-consumer/spring-nacos-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-nacos-gateway/spring-nacos-gateway.iml" filepath="$PROJECT_DIR$/spring-nacos-gateway/spring-nacos-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-nacos-provider/spring-nacos-provider.iml" filepath="$PROJECT_DIR$/spring-nacos-provider/spring-nacos-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-protobuf/spring-protobuf.iml" filepath="$PROJECT_DIR$/spring-protobuf/spring-protobuf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-quartz-task/spring-quartz-task.iml" filepath="$PROJECT_DIR$/spring-quartz-task/spring-quartz-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-redis/spring-redis.iml" filepath="$PROJECT_DIR$/spring-redis/spring-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-task/spring-task.iml" filepath="$PROJECT_DIR$/spring-task/spring-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloudStudy.iml" filepath="$PROJECT_DIR$/springCloudStudy.iml" />
+    </modules>
+  </component>
+</project>
